@@ -1,36 +1,29 @@
 import styled from 'styled-components/native';
 
-export const Wrapper = styled.SafeAreaView`
+export const Container = styled.View`
   background: #ebebeb;
   flex: 1;
-  padding-top: 30px;
-`;
-
-export const Container = styled.View`
-  padding-top: 365px;
-  align-items: center;
+  padding-top: 5px;
 `;
 
 export const Header = styled.View`
-  height: 50px;
-  padding: 0 16px;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const BalanceContainer = styled.View``;
-
-export const BalanceTitle = styled.Text`
-  color: #1b1b1b;
-  font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
+export const ImageContainer = styled.View`
+  align-items: center;
+  height: 70px;
 `;
-export const Balance = styled.Text`
-  color: #1b1b1b;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+
+export const Img = styled.Image`
+  width: 95px;
+`;
+
+export const MapContainer = styled.View`
+  flex: 1;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 16px;
 `;

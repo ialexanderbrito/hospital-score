@@ -1,25 +1,37 @@
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
+import * as Location from 'expo-location';
 
-import {
-  Wrapper,
-  Container,
-  Header,
-  BalanceContainer,
-  BalanceTitle,
-  Balance,
-} from './styles';
+import { Container, ImageContainer, Img, MapContainer } from './styles';
+import logo from '../../assets/logo.png';
 
 export default function Home() {
   return (
-    <Wrapper>
+    <>
       <Container>
-        <Header>
-          <BalanceContainer>
-            <BalanceTitle>Tabs</BalanceTitle>
-            <Balance>Template</Balance>
-          </BalanceContainer>
-        </Header>
+        <ImageContainer>
+          <Img source={logo} resizeMode="contain" />
+        </ImageContainer>
+        <MapContainer>
+          <MapView
+            style={styles.map}
+            initialRegion={{
+              latitude: -22.7682542,
+              longitude: -43.3360046,
+              latitudeDelta: 0.014,
+              longitudeDelta: 0.014,
+            }}
+          />
+        </MapContainer>
       </Container>
-    </Wrapper>
+    </>
   );
 }
+
+const styles = StyleSheet.create({
+  map: {
+    width: '100%',
+    height: '100%',
+  },
+});
