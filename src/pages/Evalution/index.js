@@ -9,14 +9,14 @@ import {
   Balance,
 } from './styles';
 
-export default function Aba2() {
+export default function Evalution() {
   return (
     <Wrapper>
       <Container>
         <Header>
           <BalanceContainer>
-            <BalanceTitle>Tabs</BalanceTitle>
-            <Balance>Segunda tela</Balance>
+            <BalanceTitle>Avaliação</BalanceTitle>
+            <Balance>Avaliar</Balance>
           </BalanceContainer>
         </Header>
       </Container>

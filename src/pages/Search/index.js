@@ -9,14 +9,14 @@ import {
   Balance,
 } from './styles';
 
-export default function Aba3() {
+export default function Search() {
   return (
     <Wrapper>
       <Container>
         <Header>
           <BalanceContainer>
-            <BalanceTitle>Tabs</BalanceTitle>
-            <Balance>Terceira tela</Balance>
+            <BalanceTitle>Buscar</BalanceTitle>
+            <Balance>Pesquisar</Balance>
           </BalanceContainer>
         </Header>
       </Container>

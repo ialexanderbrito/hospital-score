@@ -1,10 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 import HomeScreen from './pages/Home';
-import Aba2Screen from './pages/Aba2';
-import Aba3Screen from './pages/Aba3';
+import SearchScreen from './pages/Search';
+import EvalutionScreen from './pages/Evalution';
+import SettingsScreen from './pages/Settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,17 +14,21 @@ const icons = {
     lib: MaterialCommunityIcons,
     name: 'home-outline',
   },
-  Aba2: {
-    lib: MaterialCommunityIcons,
-    name: 'tab',
+  Search: {
+    lib: MaterialIcons,
+    name: 'search',
   },
-  Aba3: {
+  Evalution: {
     lib: MaterialCommunityIcons,
-    name: 'tab',
+    name: 'star-outline',
+  },
+  Settings: {
+    lib: MaterialCommunityIcons,
+    name: 'settings-outline',
   },
 };
 
-export default function Navigation() {
+export default function Routes() {
   return (
     <Tab.Navigator
       screenOptions={({ route, navigation }) => ({
@@ -47,15 +52,20 @@ export default function Navigation() {
         options={{ title: 'Inicio' }}
       />
       <Tab.Screen
-        name="Aba2"
-        component={Aba2Screen}
-        options={{ title: 'Aba2' }}
+        name="Search"
+        component={SearchScreen}
+        options={{ title: 'Buscar' }}
       />
 
       <Tab.Screen
-        name="Aba3"
-        component={Aba3Screen}
-        options={{ title: 'Aba3' }}
+        name="Evalution"
+        component={EvalutionScreen}
+        options={{ title: 'Avaliar' }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{ title: 'Ajustes' }}
       />
     </Tab.Navigator>
   );
