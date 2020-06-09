@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Alert } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
@@ -16,6 +16,37 @@ import {
 import logo from '../../assets/logo.png';
 
 export default function Home() {
+  const [currentRegion, setCurrentRegion] = useState(null);
+
+  useEffect(() => {
+    async function loadInitialPosition() {
+      const { granted } = await Location.requestPermissionsAsync();
+
+      if (granted) {
+        const { coords } = await Location.getCurrentPositionAsync({
+          enableHighAccuracy: true,
+        });
+        const { latitude, longitude } = coords;
+
+        setCurrentRegion({
+          latitude,
+          longitude,
+          latitudeDelta: 0.014,
+          longitudeDelta: 0.014,
+        });
+      }
+    }
+    loadInitialPosition();
+  }, []);
+
+  function handleRegionChanged(region) {
+    setCurrentRegion(region);
+  }
+
+  if (!currentRegion) {
+    return null;
+  }
+
   return (
     <>
       <Container>
@@ -23,15 +54,7 @@ export default function Home() {
           <Img source={logo} resizeMode="contain" />
         </ImageContainer>
         <MapContainer>
-          <MapView
-            style={styles.map}
-            initialRegion={{
-              latitude: -22.7682542,
-              longitude: -43.3360046,
-              latitudeDelta: 0.014,
-              longitudeDelta: 0.014,
-            }}
-          />
+          <MapView style={styles.map} initialRegion={currentRegion} />
         </MapContainer>
       </Container>
       <SearchHospital>
