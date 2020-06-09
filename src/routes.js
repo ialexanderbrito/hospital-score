@@ -40,7 +40,7 @@ export default function Routes() {
       tabBarOptions={{
         style: {
           backgroundColor: '#ebebeb',
-          borderTopColor: 'rgba(255,255,255,0.2)',
+          borderTopColor: 'rgba(255,255,255,0.1)',
         },
         activeTintColor: '#1b1b1b',
         inactiveTintColor: '#92929c',
