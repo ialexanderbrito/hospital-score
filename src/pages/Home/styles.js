@@ -45,7 +45,7 @@ export const SearchHospitalInput = styled.TextInput`
   border-radius: 25px;
   padding-left: 20px;
   font-size: 16px;
-  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.2);
+  //*box-shadow: 0px 4px 4px rgba(255; 255; 255; 0.2)*//;
 `;
 
 export const SearchButton = styled.TouchableOpacity`
@@ -56,4 +56,26 @@ export const SearchButton = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   margin-left: 15px;
+`;
+
+export const MarkerContainer = styled.View`
+  width: 90px;
+  height: 70px;
+  background-color: #e02041;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  align-items: center;
+`;
+
+export const MarkerContainerImg = styled.Image`
+  width: 90px;
+  height: 45px;
+`;
+
+export const MarkerContainerText = styled.Text`
+  flex: 1;
+  color: #fff;
+  font-size: 13px;
+  line-height: 23px;
 `;
