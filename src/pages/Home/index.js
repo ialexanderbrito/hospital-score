@@ -15,6 +15,8 @@ import {
 } from './styles';
 import logo from '../../assets/logo.png';
 
+//*import mapStyle from './mapStyle.json';*//
+
 export default function Home() {
   const [currentRegion, setCurrentRegion] = useState(null);
 
@@ -54,7 +56,12 @@ export default function Home() {
           <Img source={logo} resizeMode="contain" />
         </ImageContainer>
         <MapContainer>
-          <MapView style={styles.map} initialRegion={currentRegion} />
+          <MapView
+            style={styles.map}
+            initialRegion={currentRegion}
+            onRegionChangeComplete={handleRegionChanged}
+            //*customMapStyle={mapStyle}*//
+          />
         </MapContainer>
       </Container>
       <SearchHospital>
