@@ -44,6 +44,15 @@ Extras:
 no qual o tema era <b>saúde na Baixa Fluminense</b>. A ideia do aplicativo é listar os hospitais próximos e mostrar as avaliações de acordo
 com as reclamações do usuários que usam o aplicativo. Na época o projeto ficou em 2º Lugar na competição.
 
+### 📃 Etapas
+
+- [x] Criar página Home.
+- [x] Puxar informações da [API](https://github.com/ialexanderbrito/api-hospital-score).
+- [ ] Criar página de Informações do Hospital.
+- [ ] Criar página de Busca.
+- [ ] Criar página de Avaliações.
+- [ ] Criar página de Ajustes.
+
 ### ⚙ Como rodar este projeto
 
 ### Pré-requisitos
