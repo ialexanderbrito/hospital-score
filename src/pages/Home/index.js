@@ -4,6 +4,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 
+import api from '../../services/api';
+
 import {
   Container,
   Header,
@@ -24,7 +26,9 @@ import img1 from '../../assets/teste.jpg';
 //*import mapStyle from './mapStyle.json';*//
 
 export default function Home() {
+  const [hospitais, setHospitais] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
+  const [typeHospital, setTypeHospital] = useState('');
 
   useEffect(() => {
     async function loadInitialPosition() {
@@ -46,6 +50,20 @@ export default function Home() {
     }
     loadInitialPosition();
   }, []);
+
+  async function loadHospital() {
+    const { latitude, longitude } = currentRegion;
+
+    const response = await api.get('/search', {
+      params: {
+        latitude,
+        longitude,
+        type_hospital: typeHospital,
+      },
+    });
+
+    setHospitais(response.data);
+  }
 
   function handleRegionChanged(region) {
     setCurrentRegion(region);
@@ -70,29 +88,34 @@ export default function Home() {
             onRegionChangeComplete={handleRegionChanged}
             //*customMapStyle={mapStyle}*//
           >
-            <Marker
-              style={styles.mapMarker}
-              coordinate={{
-                latitude: -22.7649096,
-                longitude: -43.3338987,
-              }}
-            >
-              <MarkerContainer>
-                <MarkerContainerImg source={img1} />
-                <MarkerContainerText>SuperMarket</MarkerContainerText>
-              </MarkerContainer>
-            </Marker>
+            {hospitais.map((hospital) => (
+              <Marker
+                key={hospital._id}
+                style={styles.mapMarker}
+                coordinate={{
+                  longitude: hospital.location.coordinates[0],
+                  latitude: hospital.location.coordinates[1],
+                }}
+              >
+                <MarkerContainer>
+                  <MarkerContainerImg source={{ uri: hospital.image_uri }} />
+                  <MarkerContainerText>{hospital.name}</MarkerContainerText>
+                </MarkerContainer>
+              </Marker>
+            ))}
           </MapView>
         </MapContainer>
 
         <SearchHospital>
           <SearchHospitalInput
-            placeholder="Buscar hospital por nome..."
+            placeholder="Buscar por estrutura... ex: UPA"
             placeholderTextColor="#999"
             autoCapitalize="words"
+            value={typeHospital}
+            onChangeText={setTypeHospital}
           />
-          <SearchButton>
-            <MaterialIcons name="my-location" size={20} color="#FFF" />
+          <SearchButton onPress={loadHospital}>
+            <MaterialIcons name="search" size={24} color="#FFF" />
           </SearchButton>
         </SearchHospital>
       </Container>
