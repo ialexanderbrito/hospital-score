@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
+import { useNavigation } from '@react-navigation/native';
 
 import api from '../../services/api';
 
@@ -21,7 +22,6 @@ import {
 } from './styles';
 
 import logo from '../../assets/logo.png';
-import img1 from '../../assets/teste.jpg';
 
 //*import mapStyle from './mapStyle.json';*//
 
@@ -29,6 +29,8 @@ export default function Home() {
   const [hospitais, setHospitais] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
   const [typeHospital, setTypeHospital] = useState('');
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     async function loadInitialPosition() {
@@ -73,6 +75,10 @@ export default function Home() {
     return null;
   }
 
+  function handleNavigateToDetail(hospital) {
+    navigation.navigate('Detail', { hospital });
+  }
+
   return (
     <>
       <Container>
@@ -92,6 +98,7 @@ export default function Home() {
               <Marker
                 key={hospital._id}
                 style={styles.mapMarker}
+                onPress={() => handleNavigateToDetail(hospital)}
                 coordinate={{
                   longitude: hospital.location.coordinates[0],
                   latitude: hospital.location.coordinates[1],
