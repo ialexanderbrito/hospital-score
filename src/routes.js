@@ -97,7 +97,7 @@ function HomeTabs() {
       })}
       tabBarOptions={{
         style: {
-          backgroundColor: '#ebebeb',
+          backgroundColor: '#f0f0f5',
           borderTopColor: 'rgba(255,255,255,0.1)',
         },
         activeTintColor: '#1b1b1b',
