@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Template",
-    "slug": "template",
+    "name": "Hospital Score",
+    "slug": "hospitalscore",
     "sdkVersion": "37.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
@@ -10,19 +10,19 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ebebeb"
+      "backgroundColor": "#e02041"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "bundleIdentifier": "com.ialexanderbrito.template",
+      "bundleIdentifier": "com.ialexanderbrito.hospitalscore",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.ialexanderbrito.template",
+      "package": "com.ialexanderbrito.hospitalscore",
       "versionCode": 1
     }
   }
