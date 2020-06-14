@@ -42,7 +42,7 @@ export const SearchHospitalInput = styled.TextInput`
   height: 50px;
   background-color: #fff;
   color: #333;
-  font-family: 'Roboto_400Regular';
+  font-family: ${'Roboto_400Regular'};
   border-radius: 25px;
   padding-left: 20px;
   font-size: 16px;
@@ -77,7 +77,7 @@ export const MarkerContainerImg = styled.Image`
 export const MarkerContainerText = styled.Text`
   flex: 1;
   color: #fff;
-  font-family: 'Roboto_400Regular';
+  font-family: ${'Roboto_400Regular'};
   font-size: 10px;
   line-height: 23px;
 `;
