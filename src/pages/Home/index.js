@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
-import { useNavigation } from '@react-navigation/native';
 
 import api from '../../services/api';
 
@@ -75,8 +75,8 @@ export default function Home() {
     return null;
   }
 
-  function handleNavigateToDetail(hospital) {
-    navigation.navigate('Detail', { hospital });
+  function handleNavigateToDetail(hospitais) {
+    navigation.navigate('Detail', { hospitais });
   }
 
   return (
@@ -98,7 +98,7 @@ export default function Home() {
               <Marker
                 key={hospital._id}
                 style={styles.mapMarker}
-                onPress={() => handleNavigateToDetail(hospital)}
+                onPress={() => handleNavigateToDetail()}
                 coordinate={{
                   longitude: hospital.location.coordinates[0],
                   latitude: hospital.location.coordinates[1],
