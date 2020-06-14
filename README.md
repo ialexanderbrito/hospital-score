@@ -86,6 +86,8 @@ $ expo start
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
+<b>💡 Lembre de renomear o arquivo ``.env.example.json`` para ``.env.json`` e coloque o IP da sua máquina.</b>
+
 ### :recycle: Como contribuir
 
 - Fork esse repositório;
