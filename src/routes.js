@@ -98,7 +98,7 @@ function HomeTabs() {
       tabBarOptions={{
         style: {
           backgroundColor: '#f0f0f5',
-          borderTopColor: 'rgba(255,255,255,0.1)',
+          borderTopColor: 'rgba(255,255,255,0.2)',
         },
         activeTintColor: '#1b1b1b',
         inactiveTintColor: '#92929c',
