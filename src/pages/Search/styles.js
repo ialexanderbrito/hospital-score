@@ -6,7 +6,7 @@ export const Wrapper = styled.SafeAreaView`
   padding-top: 0px;
 `;
 
-export const Container = styled.View``;
+export const Container = styled.ScrollView``;
 
 export const Header = styled.View`
   align-items: center;
@@ -51,4 +51,47 @@ export const SearchButton = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   margin-left: 15px;
+`;
+
+export const ListHospitalContainer = styled.View`
+  margin-top: 100px;
+  margin-left: 30px;
+`;
+
+export const ListHospitalTitle = styled.Text`
+  font-family: ${'Ubuntu_700Bold'};
+  color: #e02041;
+  font-size: 24px;
+`;
+
+export const ListHospitalDescription = styled.Text`
+  color: #333;
+  font-family: ${'Roboto_400Regular'};
+`;
+
+export const ListHospitalHeader = styled.View`
+  flex-direction: row;
+  margin-top: 10px;
+`;
+
+export const ListHospitalCity = styled.Text`
+  color: #1b1b1b;
+  font-family: ${'Roboto_500Medium'};
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 15px;
+`;
+
+export const ListHospitalUF = styled.Text`
+  color: #1b1b1b;
+  font-family: ${'Roboto_500Medium'};
+  font-weight: bold;
+  font-size: 20px;
+`;
+
+export const ImgHospital = styled.Image`
+  width: 340px;
+  height: 170px;
+  border-radius: 10px;
+  margin-top: 5px;
 `;
