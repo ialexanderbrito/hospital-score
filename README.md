@@ -49,8 +49,9 @@ com as reclamações do usuários que usam o aplicativo. Na época o projeto fic
 - [x] Criar página Home.
 - [x] Puxar informações da [API](https://github.com/ialexanderbrito/api-hospital-score).
 - [x] Criar página de Detalhes do Hospital.
-- [ ] Puxar informações para a página de Detalhes
-- [ ] Criar página de Busca.
+- [ ] Puxar informações para a página de Detalhes.
+- [x] Criar página de Pesquisa.
+- [ ] Puxar informações para a página de Pesquisa.
 - [ ] Criar página de Avaliações.
 - [ ] Criar página de Ajustes.
 
