@@ -1,24 +1,38 @@
 import React from 'react';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import {
   Wrapper,
   Container,
   Header,
-  BalanceContainer,
-  BalanceTitle,
-  Balance,
+  ImageContainer,
+  Img,
+  SearchHospital,
+  SearchHospitalInput,
+  SearchButton,
 } from './styles';
+
+import logo from '../../assets/logo.png';
 
 export default function Search() {
   return (
     <Wrapper>
       <Container>
         <Header>
-          <BalanceContainer>
-            <BalanceTitle>Buscar</BalanceTitle>
-            <Balance>Pesquisar</Balance>
-          </BalanceContainer>
+          <ImageContainer>
+            <Img source={logo} resizeMode="contain" />
+          </ImageContainer>
         </Header>
+        <SearchHospital>
+          <SearchHospitalInput
+            placeholder="Buscar por estrutura... ex: UPA"
+            placeholderTextColor="#999"
+            autoCapitalize="words"
+          />
+          <SearchButton>
+            <MaterialIcons name="search" size={24} color="#FFF" />
+          </SearchButton>
+        </SearchHospital>
       </Container>
     </Wrapper>
   );

@@ -1,36 +1,54 @@
 import styled from 'styled-components/native';
 
 export const Wrapper = styled.SafeAreaView`
-  background: #ebebeb;
+  background: #f0f0f5;
   flex: 1;
-  padding-top: 30px;
+  padding-top: 0px;
 `;
 
-export const Container = styled.View`
-  padding-top: 365px;
-  align-items: center;
-`;
+export const Container = styled.View``;
 
 export const Header = styled.View`
-  height: 50px;
-  padding: 0 16px;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const BalanceContainer = styled.View``;
-
-export const BalanceTitle = styled.Text`
-  color: #1b1b1b;
-  font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
+export const ImageContainer = styled.View`
+  align-items: center;
+  height: 70px;
 `;
-export const Balance = styled.Text`
-  color: #1b1b1b;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+
+export const Img = styled.Image`
+  width: 95px;
+`;
+
+export const SearchHospital = styled.View`
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  right: 20px;
+  z-index: 5;
+  flex-direction: row;
+`;
+
+export const SearchHospitalInput = styled.TextInput`
+  flex: 1;
+  height: 50px;
+  background-color: #fff;
+  color: #333;
+  font-family: ${'Roboto_400Regular'};
+  border-radius: 25px;
+  padding-left: 20px;
+  font-size: 16px;
+  //*box-shadow: 0px 4px 4px rgba(255; 255; 255; 0.2)*//;
+`;
+
+export const SearchButton = styled.TouchableOpacity`
+  width: 50px;
+  height: 50px;
+  background-color: #e02041;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
 `;
