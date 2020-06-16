@@ -18,7 +18,7 @@ import {
   ButtonText,
 } from './styles';
 
-import teste from '../../assets/moacyr.jpg';
+import teste from '../../assets/hospitais/moacyr.jpg';
 
 export default function Detail() {
   const navigation = useNavigation();
