@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
 
-import api from '../../services/api';
+import LisHospital from '../../components/ListHospital';
 
 import {
   Wrapper,
@@ -13,17 +12,9 @@ import {
   SearchHospital,
   SearchHospitalInput,
   SearchButton,
-  ListHospitalContainer,
-  ListHospitalTitle,
-  ListHospitalDescription,
-  ListHospitalHeader,
-  ListHospitalCity,
-  ListHospitalUF,
-  ImgHospital,
 } from './styles';
 
 import logo from '../../assets/logo.png';
-import teste from '../../assets/moacyr.jpg';
 
 export default function Search() {
   return (
@@ -34,17 +25,7 @@ export default function Search() {
             <Img source={logo} resizeMode="contain" />
           </ImageContainer>
         </Header>
-        <ListHospitalContainer>
-          <ListHospitalTitle>
-            Hospital Municipal Moacyr do Carmo
-          </ListHospitalTitle>
-          <ListHospitalDescription>Hospital Geral</ListHospitalDescription>
-          <ListHospitalHeader>
-            <ListHospitalCity>Duque de Caxias</ListHospitalCity>
-            <ListHospitalUF>RJ</ListHospitalUF>
-          </ListHospitalHeader>
-          <ImgHospital source={teste} />
-        </ListHospitalContainer>
+        <LisHospital />
 
         <SearchHospital>
           <SearchHospitalInput
