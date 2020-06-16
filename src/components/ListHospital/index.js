@@ -24,6 +24,8 @@ const items = [
     img: adao,
     name: 'Hospital Estadual Adão Pereira Nunes',
     type: 'Hospital Geral',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
 
   {
@@ -31,6 +33,8 @@ const items = [
     img: infantil,
     name: 'Hospital Infantil Ismélia Silveira',
     type: 'Hospital Especializado',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
 
   {
@@ -38,6 +42,8 @@ const items = [
     img: moacyr,
     name: 'Hospital Municipal Moacyr Rodrigues do Carmo',
     type: 'Hospital Geral',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
 
   {
@@ -45,6 +51,8 @@ const items = [
     img: saovicente,
     name: 'Hospital de Clínicas São Vicente',
     type: 'Hospital Geral',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
 
   {
@@ -52,6 +60,8 @@ const items = [
     img: upa1,
     name: 'UPA 24H Duque de Caxias I',
     type: 'UPA',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
 
   {
@@ -59,12 +69,16 @@ const items = [
     img: upa2,
     name: 'UPA 24H Duque de Caxias II',
     type: 'UPA',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
   {
     key: String(Math.random()),
     img: xerem,
     name: 'Hospital Municipal de Xerém',
     type: 'Hospital Especializado',
+    city: 'Duque de Caxias',
+    uf: 'RJ',
   },
 ];
 
@@ -76,8 +90,8 @@ export default function ListHospital() {
           <ListHospitalTitle>{item.name}</ListHospitalTitle>
           <ListHospitalDescription>{item.type}</ListHospitalDescription>
           <ListHospitalHeader>
-            <ListHospitalCity>Duque de Caxias</ListHospitalCity>
-            <ListHospitalUF>RJ</ListHospitalUF>
+            <ListHospitalCity>{item.city}</ListHospitalCity>
+            <ListHospitalUF>{item.uf}</ListHospitalUF>
           </ListHospitalHeader>
           <ImgHospital source={item.img} />
         </ListOption>
