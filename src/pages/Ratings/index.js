@@ -1,5 +1,5 @@
 import React from 'react';
-import { AirbnbRating } from 'react-native-ratings';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import {
   Wrapper,
@@ -7,9 +7,9 @@ import {
   Header,
   ImageContainer,
   Img,
-  RatingOption,
-  RatingContainer,
-  RatingTitle,
+  ButtonContainer,
+  Button,
+  ButtonTitle,
 } from './styles';
 
 import logo from '../../assets/logo.png';
@@ -26,6 +26,12 @@ export default function Ratings() {
         </Header>
         <RatingOptions />
       </Container>
+      <ButtonContainer>
+        <Button>
+          <ButtonTitle>Enviar avaliação</ButtonTitle>
+          <MaterialIcons name="send" size={20} color="#fff" />
+        </Button>
+      </ButtonContainer>
     </Wrapper>
   );
 }
