@@ -12,7 +12,7 @@ import HomeScreen from './pages/Home';
 import DetailScreen from './pages/Detail';
 
 import SearchScreen from './pages/Search';
-import EvalutionScreen from './pages/Evalution';
+import RatingsScreen from './pages/Ratings';
 import SettingsScreen from './pages/Settings';
 
 const icons = {
@@ -24,7 +24,7 @@ const icons = {
     lib: MaterialIcons,
     name: 'search',
   },
-  Evalution: {
+  Ratings: {
     lib: MaterialCommunityIcons,
     name: 'star-outline',
   },
@@ -54,13 +54,13 @@ function SearchStackScreen() {
   );
 }
 
-const EvalutionStack = createStackNavigator();
+const RatingsStack = createStackNavigator();
 
-function EvalutionStackScreen() {
+function RatingsStackScreen() {
   return (
-    <EvalutionStack.Navigator headerMode="none">
-      <EvalutionStack.Screen name="Evalution" component={EvalutionScreen} />
-    </EvalutionStack.Navigator>
+    <RatingsStack.Navigator headerMode="none">
+      <RatingsStack.Screen name="Ratings" component={RatingsScreen} />
+    </RatingsStack.Navigator>
   );
 }
 
@@ -100,7 +100,7 @@ function HomeTabs() {
           backgroundColor: '#f0f0f5',
           borderTopColor: 'rgba(255,255,255,0.2)',
         },
-        activeTintColor: '#1b1b1b',
+        activeTintColor: '#e02041',
         inactiveTintColor: '#92929c',
       }}
     >
@@ -115,8 +115,8 @@ function HomeTabs() {
         options={{ title: 'Pesquisar' }}
       />
       <Tab.Screen
-        name="Evalution"
-        component={EvalutionStackScreen}
+        name="Ratings"
+        component={RatingsStackScreen}
         options={{ title: 'Avaliar' }}
       />
       <Tab.Screen
