@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Wrapper = styled.SafeAreaView`
   background: #f0f0f5;
   flex: 1;
-  padding-top: 0px;
+  padding-top: 5px;
 `;
 
 export const Container = styled.ScrollView``;
