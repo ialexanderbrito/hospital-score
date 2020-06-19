@@ -28,6 +28,8 @@ Extras:
   - [React Navigation](https://reactnavigation.org/)
   - [React Native Maps](https://github.com/react-native-community/react-native-maps)
   - [Expo Location](https://docs.expo.io/versions/latest/sdk/location/)
+  - [Expo Google Fonts](https://github.com/expo/google-fonts)
+  - [React Native Ratings](https://github.com/Monte9/react-native-ratings)
   
 - Estilos
   - [EditorConfig](https://editorconfig.org/)
