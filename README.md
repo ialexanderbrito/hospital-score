@@ -52,7 +52,7 @@ com as reclamações do usuários que usam o aplicativo. Na época o projeto fic
 - [ ] Puxar informações para a página de Detalhes.
 - [x] Criar página de Pesquisa.
 - [ ] Puxar informações para a página de Pesquisa.
-- [ ] Criar página de Avaliações.
+- [x] Criar página de Avaliações.
 - [ ] Criar página de Ajustes.
 
 ### ⚙ Como rodar este projeto
