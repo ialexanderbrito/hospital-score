@@ -86,7 +86,7 @@ $ npm install ou yarn
 # Execute a aplicação
 $ expo start
 
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+# A aplicação será aberta no navegador, basta acessar usando o QRCode na tela.
 ```
 
 <b>💡 Lembre de renomear o arquivo ``.env.example.json`` para ``.env.json`` e coloque o IP da sua máquina.</b>
