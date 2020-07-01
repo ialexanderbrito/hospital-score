@@ -25,7 +25,7 @@ import logo from '../../assets/logo.png';
 
 //*import mapStyle from './mapStyle.json';*//
 
-export default function Home() {
+export default Home = () => {
   const [hospitais, setHospitais] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
   const [typeHospital, setTypeHospital] = useState('');

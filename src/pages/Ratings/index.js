@@ -15,7 +15,7 @@ import {
 import logo from '../../assets/logo.png';
 import RatingOptions from '../../components/RatingOptions';
 
-export default function Ratings() {
+export default Ratings = () => {
   return (
     <Wrapper>
       <Container>

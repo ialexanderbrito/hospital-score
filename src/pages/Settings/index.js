@@ -9,7 +9,7 @@ import {
   Balance,
 } from './styles';
 
-export default function Settings() {
+export default Settings = () => {
   return (
     <Wrapper>
       <Container>
@@ -22,4 +22,4 @@ export default function Settings() {
       </Container>
     </Wrapper>
   );
-}
+};

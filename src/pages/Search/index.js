@@ -16,7 +16,7 @@ import {
 
 import logo from '../../assets/logo.png';
 
-export default function Search() {
+export default Search = () => {
   return (
     <Wrapper>
       <Container>

@@ -20,7 +20,7 @@ import {
 
 import teste from '../../assets/hospitais/moacyr.jpg';
 
-export default function Detail() {
+export default Detail = () => {
   const navigation = useNavigation();
 
   function handleMaps() {
@@ -85,7 +85,7 @@ export default function Detail() {
       </Wrapper>
     </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   pointImage: {
