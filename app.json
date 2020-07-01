@@ -24,6 +24,8 @@
     "android": {
       "package": "com.ialexanderbrito.hospitalscore",
       "versionCode": 1
-    }
+    },
+    "description": "App para listar e avaliar hospitais públicos.",
+    "githubUrl": "https://github.com/ialexanderbrito/hospital-score"
   }
 }
